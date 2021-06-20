@@ -67,11 +67,27 @@ namespace HashTable
                 }
             }
         }
-    }
-    public struct KeyValue<k,v>             // key and value is setand this is passed to linked list 
+        public bool isEmpty()
         {
-            public k key { get; set; }
-            public v value { get; set; }
+            if (GetSize() <= 0)
+                return true;
+            else
+                return false;
+        }
+    
+        // returns the size of hashtable.
+        public int GetSize()
+        {
+            return size;
         }
     }
+
+    public struct KeyValue<k,v>             // key and value is setand this is passed to linked list 
+    {
+        public k key { get; set; }
+        public v value { get; set; }
+
+    }
+}
+
 
